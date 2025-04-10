@@ -23,6 +23,9 @@
 .head {
   background-color: red;
 }
+.snake {
+  background-color: purple;
+}
 .food {
-  background-color: pink;
+  background-color: yellow;
 }
