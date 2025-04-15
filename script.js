@@ -20,9 +20,24 @@ function main(ctime) {
   lastPaintTime = ctime;
   gameEngine();
 }
-function isCollide(sarr) {
-  return false;
+function isCollide(snake) {
+  //if the snake collide with tehmself
+  for (let i = 1; i < snakeArr.length; i++) {
+    if (snake[i].x === snake[0].x && snake[i].y === snake[0].y) {
+      return true;
+    }
+  }
+  //if the snake bunmp into the wall
+  if (
+    snake[0].x >= 18 ||
+    snake[0].x <= 0 ||
+    snake[0].y >= 18 ||
+    snake[0].y <= 0
+  ) {
+    return true;
+  }
 }
+
 function gameEngine() {
   //part-1:updating the snake array and food
   if (isCollide(snakeArr)) {
