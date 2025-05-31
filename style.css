@@ -11,6 +11,13 @@
   justify-content: center;
   align-items: center;
 }
+#scoreBox {
+  position: absolute;
+  top: 9px;
+  right: 100px;
+  font-size: 39px;
+  font-weight: bold;
+}
 #board {
   background: linear-gradient(rgb(222, 231, 222), rgb(234, 234, 195));
   width: 90vmin;
